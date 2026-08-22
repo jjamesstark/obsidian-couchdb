@@ -1,0 +1,17 @@
+services:
+  couchdb:
+    image: couchdb:latest
+    container_name: obsidian-sync
+    environment:
+      COUCHDB_USER: ${COUCHDB_USER}
+      COUCHDB_PASSWORD: ${COUCHDB_PASSWORD}
+    volumes:
+      - ./data:/opt/couchdb/data
+      - ./config/local.ini:/opt/couchdb/etc/local.ini
+    ports:
+      - "5984:5984"
+    restart: unless-stopped
+environment:
+  RACK_ENV: development
+  SHOW: "true"
+  USER_INPUT:
