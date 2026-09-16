@@ -11,7 +11,7 @@ A quick deployment of [CouchDB](https://docs.couchdb.org/en/stable/) on [Render]
   - you will use these to authenticate for database creation and setting up LiveSync in Obsidian
 5. Deploy!
 
-# Create Database
+## Create Database
 
 Once your deployment is up render provides a public URL for the service. You can verify it with something like
 
